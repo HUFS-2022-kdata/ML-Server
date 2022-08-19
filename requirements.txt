@@ -1,0 +1,10 @@
+flask
+numpy
+pandas
+librosa
+tqdm
+matplotlib
+torch
+torchaudio
+astropy
+hydra==1.1
