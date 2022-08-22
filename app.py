@@ -1,4 +1,5 @@
 from flask import Flask, request
+from werkzeug.utils import secure_filename
 from inference import result
 
 def revise(sentence):
@@ -17,18 +18,15 @@ def revise(sentence):
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    file = ''
-    data = result(file)
-    data = revise(data[0])
-    return data    
+def start():
+    return 'start' 
 
-@app.route('/inference',methods=['POST'])
+@app.route('/upload',methods=['POST'])
 def inference():
-    file = request.files.get('file');
-    data = result(file)
-    data = revise(data[0])
-    return data
+    if request.method == "POST":
+        audiofile = request.files["file"]
+        audiofile.save(secure_filename(audiofile.filename))
+    return result(audiofile)
 
 if __name__ == '__main__':
     app.run()
