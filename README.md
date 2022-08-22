@@ -14,7 +14,7 @@
 * hydra: `pip install hydra-core==1.1`
 * Flask: `pip install flask
 
-## Example of POST Method on javascript
+## Example of POST Method on Expo/React-Native
 
 ```
 const uploadAudio = async () => {
