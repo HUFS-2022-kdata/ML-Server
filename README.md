@@ -5,7 +5,7 @@ This is an end-to-end speech recognition server using deepspeech2 model trained 
 
 (dataset source: https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=608)
 
-This project used Kospeech to train deepspeech model and inference audio data
+This project used Kospeech to train deepspeech2 model and to inference audio data
 
 ## Requirements
 
