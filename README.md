@@ -1,5 +1,11 @@
 # Speech Recogniton Server for langauge disorders
 
+## Introduction
+This is an end-to-end speech recognition server using deepspeech2 model trained by Hallym AI Data of Disorder from AI-Hub Korea
+(dataset source: https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=608)
+
+This project used Kospeech to train deepspeech model and inference audio data
+
 ## Requirements
 
 * Numpy: `pip install numpy`
@@ -35,3 +41,8 @@ const uploadAudio = async () => {
   }
   await fetch('url/upload',options)
 ```
+
+## References
+Kospeech: https://github.com/sooftware/kospeech
+Deepspeech2: https://arxiv.org/abs/1512.02595
+
