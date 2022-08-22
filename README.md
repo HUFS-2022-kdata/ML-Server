@@ -14,3 +14,24 @@
 * hydra: `pip install hydra-core==1.1`
 * Flask: `pip install flask
 
+## Example of POST Method on javascript
+
+```
+const uploadAudio = async () => {
+  const filename = uri.split('/').pop()
+  let formData = new FormData()
+  formData.append('file', {
+    uri : uri,
+    name : filename,
+    type : 'audio/m4a'
+  })
+  let options = {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accpet: "application/json",
+      "Content-Type": "multipart/form-data"
+    }
+  }
+  await fetch('url/upload',options)
+```
