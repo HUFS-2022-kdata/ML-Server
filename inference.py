@@ -45,12 +45,12 @@ def parse_audio(audio_path: str, del_silence: bool = False, audio_extension: str
 
     return torch.FloatTensor(feature).transpose(0, 1)
 
-def result(audio):
+def result():
     parser = argparse.ArgumentParser(description='KoSpeech')
     parser.add_argument('--device', type=str, required=False, default='cpu')
     opt = parser.parse_args()
 
-    feature = parse_audio('./chunk7.wav', del_silence=True)
+    feature = parse_audio('./audio.wav', del_silence=True)
     input_length = torch.LongTensor([len(feature)])
     vocab = KsponSpeechVocabulary('./aihub_labels.csv')
 

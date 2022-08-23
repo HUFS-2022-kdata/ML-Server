@@ -1,6 +1,7 @@
-from flask import Flask, request
-from werkzeug.utils import secure_filename
+from flask import Flask, request, jsonify
+from pydub import AudioSegment
 from inference import result
+import config
 
 def revise(sentence):
     words = sentence.split()
@@ -25,8 +26,16 @@ def start():
 def inference():
     if request.method == "POST":
         audiofile = request.files["file"]
-        audiofile.save(secure_filename(audiofile.filename))
-    return result(audiofile)
+        filename = audiofile.filename
+
+        track = AudioSegment.from_file(audiofile,  format= 'm4a')
+        file_handle = track.export('audio.wav', format='wav')
+        response = {}
+        data = revise(result()[0])
+        response['text'] = data
+        print(data)
+        
+    return jsonify(response)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=config.IP_CONFIG['host'],port='5000')

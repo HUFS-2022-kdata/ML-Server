@@ -14,12 +14,14 @@ This project used Kospeech to train deepspeech2 model and to inference audio dat
 * Pandas: `pip install pandas` 
 * Matplotlib: `pip install matplotlib`
 * librosa: `conda install -c conda-forge librosa` 
+* pydub `pip install pydub`
 * torchaudio: `pip install torchaudio==0.6.0` 
 * tqdm: `pip install tqdm`
 * sentencepiece: `pip install sentencepiece` 
 * warp-rnnt: `pip install warp_rnnt` 
 * hydra: `pip install hydra-core==1.1`
 * Flask: `pip install flask
+* ffmpeg(for convert ios m4a file to wav): Refer to [ffmpeg website](https://ffmpeg.org/)
 
 ## Example of POST Method on Expo/React-Native
 
