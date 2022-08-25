@@ -8,6 +8,7 @@ This is an end-to-end speech recognition server using deepspeech2 model trained 
 This project used Kospeech to train deepspeech2 model and to inference audio data
 
 ## Requirements
+python version == 3.8
 
 * Numpy: `pip install numpy`
 * Pytorch: Refer to [PyTorch website](http://pytorch.org/) to install the version w.r.t. your environment.   
@@ -21,7 +22,9 @@ This project used Kospeech to train deepspeech2 model and to inference audio dat
 * warp-rnnt: `pip install warp_rnnt` 
 * hydra: `pip install hydra-core==1.1`
 * Flask: `pip install flask`
-* ffmpeg(for convert ios m4a file to wav): Refer to [ffmpeg website](https://ffmpeg.org/)
+* ffmpeg: Refer to [ffmpeg website](https://ffmpeg.org/)
+
+add model.pt and vocab dictionary csv file in root directory
 
 ## Example of POST Method on Expo/React-Native
 
