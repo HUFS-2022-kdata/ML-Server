@@ -15,7 +15,7 @@
 ![image](https://github.com/user-attachments/assets/faad9b73-3dfe-400d-a8dd-20d4f195b41e)
 
 [시연 동영상]
-
+https://youtube.com/shorts/iKKSGWPGtTE
 
 ## Requirements
 python version == 3.8
