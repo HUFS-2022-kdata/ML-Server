@@ -1,11 +1,15 @@
-# Speech Recogniton Server for langauge disorders
+# 구음장애인을 위한 음성인식 서비스
 
 ## Introduction
-This is an end-to-end speech recognition server using deepspeech2 model trained by Hallym AI Data of Disorder from AI-Hub Korea
+발음이 정확하지 않은 구음장애인의 데이터를 학습하여 구음장애인도 음성인식을 원활하게 활용할 수 있는 서비스를 제공합니다.  
+언어모델 학습에는 deepspeech2 모델을 활용하였으며, 데이터 출처는 AI 허브의 구음장애 데이터셋입니다.
+구음장애 데이터 원본 및 피치 구음장애인을 위한 음성인식 서비스
 
+## Introduction
+발음이 정확하지 않은 구음장애인의 데이터를 학습하여 구음장애인도 음성인식을 원활하게 활용할 수 있는 서비스를 제공합니다.  
+언어모델 학습에는 deepspeech2 모델을 활용하였으며, 데이터 출처는 AI 허브의 구음장애 데이터셋입니다.
+구음장애 데이터 원본 및 피치를 조절한 데이터를 학습에 사용하였습니다.
 (dataset source: https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=608)
-
-This project used Kospeech to train deepspeech2 model and to inference audio data
 
 ## Requirements
 python version == 3.8
@@ -23,7 +27,6 @@ python version == 3.8
 * hydra: `pip install hydra-core==1.1`
 * Flask: `pip install flask`
 * ffmpeg: Refer to [ffmpeg website](https://ffmpeg.org/)
-
 add model.pt and vocab dictionary csv file in root directory
 
 ## Example of POST Method on Expo/React-Native
@@ -49,7 +52,6 @@ const uploadAudio = async () => {
 ```
 
 ## References
-Kospeech: https://github.com/sooftware/kospeech
-
+Kospeech: https://github.com/sooftware/kospeech  
 Deepspeech2: https://arxiv.org/abs/1512.02595
 
