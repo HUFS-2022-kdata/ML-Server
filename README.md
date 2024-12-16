@@ -60,4 +60,5 @@ const uploadAudio = async () => {
 ## References
 Kospeech: https://github.com/sooftware/kospeech  
 Deepspeech2: https://arxiv.org/abs/1512.02595
+![image](https://github.com/user-attachments/assets/71a6fdc1-3492-48ab-ad6b-778beb540062)
 
